@@ -6,16 +6,13 @@ def home(request):
     # return HttpResponse("hello world, Akash kumar")
     return render(request, 'website/home.html')
 
-
-
 def name(request):
-    return HttpResponse("hello name, Akash kumar")
+    return render(request, "website/name.html")
 
 def contact(request):
-    return HttpResponse("hello contact, Akash kumar")
+    return render(request, "website/contact.html")
 
 def about(request):
-    return HttpResponse("hello about, Akash kumar")
-
+    return render(request, "website/about.html")
 
 
