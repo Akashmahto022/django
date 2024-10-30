@@ -4,4 +4,15 @@
 
 {% block content %}
     <h1>this is out first app page</h1>
-{% endblock %}
+    
+
+    <div class="grid grid-cols-3 gap-4 m-4">
+        {% for users in users %}
+        <div class='bg-gray-900 p-5 rounded-md hover:'>
+            <img class="rounded-md shadow-lg" src="{{users.image.url}}" alt="">
+            <h1 class=>{{users.name}}</h1>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% endblock %}

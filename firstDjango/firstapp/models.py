@@ -4,7 +4,7 @@ from django.utils import timezone
 
 class User(models.Model):
     USER_TYPE = [
-        ('normal', "normaluse"),
+        ('normal', "normaluser"),
         ('admin', "useradmin")
     ]
     name = models.CharField(max_length=100)
@@ -13,5 +13,7 @@ class User(models.Model):
     type = models.CharField(max_length=8, choices=USER_TYPE)
     
     
+    def __str__(self):
+        return self.name
     
     
