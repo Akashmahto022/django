@@ -1,0 +1,19 @@
+{% extends 'layout.html' %} 
+
+{% block title %} 
+User details page 
+{% endblock %}
+
+
+{% block content %}
+<h1>this is user details page</h1>
+
+<div>
+    <p>
+        {{user.name}}
+
+        {{user.description}}
+    </p>
+</div>
+
+{% endblock %}
