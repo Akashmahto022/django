@@ -1,5 +1,23 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html' %} {% block content %}
+<div class="m-6">
+  test content for forms
 
-{% block content %}
-    test content for forms
+  <form class="flex gap-5" method="POST">
+    {% csrf_token %} 
+    {{form.as_p}}
+    <button type="submit" class="w=12 px-2 bg-blue-700">submit</button>
+  </form>
+
+  {% if stores %}
+  <div class="mt-10">
+    <h2 class="text-white bg-orange-700 inline-block p-2">Stores available</h2>
+    <ul>
+      {% for store in stores %}
+      <li>Store Name: {{store.name}}</li>
+      <li>Store Locatio: {{store.location}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
 {% endblock %}
