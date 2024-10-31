@@ -20,7 +20,7 @@ class User(models.Model):
     
 
 # one to many
-class UserReviw(models.model):
+class UserReviw(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviews")
     getUser = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.IntegerField()
